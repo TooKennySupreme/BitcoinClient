@@ -34,7 +34,7 @@ while True:
 					pass
 				else:
 					json_data = json.loads(response.text)
-					ipFile.write(json_data["relayed_by"]+"\n")
+					ipFile.write(json_data["relayed_by"] + "\t" + str(time.time()) + "\n")
 					ipFile.flush()
 					#update viewd block
 					lastBlockHash = latestBlockHash
