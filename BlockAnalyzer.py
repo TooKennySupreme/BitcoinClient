@@ -4,7 +4,9 @@ import json
 
 LATEST_BLOCK_API = "https://blockchain.info/pt/q/latesthash"
 
-BLOCK_INFO = "https://blockchain.info/pt/rawblock/{0}"
+BLOCK_CHAIN_INFO = "https://blockchain.info/pt/rawblock/{0}"
+
+BLOCK_CYPHER_INFO = "https://api.blockcypher.com/v1/btc/main/blocks/{0}"
 
 lastBlockHash = ""
 
@@ -26,7 +28,7 @@ while True:
 			#Check if its the same ip viewed at last time to minimize duplicate
 			if lastBlockHash != latestBlockHash:
 				print("Getting latest block info. . .\n")
-				response = requests.get(BLOCK_INFO.format(latestBlockHash))
+				response = requests.get(BLOCK_CYPHER_INFO.format(latestBlockHash))
 				if response == None or response == "":
 					print("Empty response on latest block info! Trying again!\n")
 					pass
