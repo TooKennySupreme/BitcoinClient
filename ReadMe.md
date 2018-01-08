@@ -19,7 +19,8 @@ $ pip install shodan
 ### Todos
 
  - Write MORE Tests
- - Add Night Mode
+ - Find a way to identify public entities's IPs and their mask.
+ - Add public entities's address.
 
 License
 ----
