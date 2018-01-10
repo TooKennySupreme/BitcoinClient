@@ -41,9 +41,9 @@ for line in ipFile:
 			ipLatLong = (host['latitude'],host['longitude'])
 			for UniversityLatLong in universitiesLatLong:
 				distance = great_circle((UniversityLatLong[0],UniversityLatLong[1]),ipLatLong).miles
-				if(distance < 1.0):
+				if(distance < 0.12):
 					print("Possible positive: {0}".format(ip))
-					
+
 			print ("IP: {0}\ncountry: {1}\ncity: {2}\nlatitude: {3}\nlongitude: {4}".format(host['ip_str'], host['country_code'],host['city'], host['latitude'], host['longitude']))
 	except Exception as e:
 		print("Unknow error :{0}".format(e))
