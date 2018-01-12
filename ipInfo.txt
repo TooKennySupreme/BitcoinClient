@@ -1,1 +1,0 @@
-IP: 205.150.193.193	country: US	city: None	longitude: 37.751000000000005	latitude: -97.822
